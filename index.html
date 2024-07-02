@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABDIRIZACK OSMAIL - CV</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d41e1e;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation ease 2s forwards;
+    }
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideInLeft 1s ease forwards;
+    }
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideInRight 1s ease forwards;
+    }
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade-in bounce">
+      <h1>ABDIRIZACK OSMAIL</h1>
+      <p>Web Developer</p>
+    </header>
+    <section class="slide-in-left">
+      <h2>About Me</h2>
+      <p>I am a passionate web developer with experience in HTML, CSS, and JavaScript. Currently learning advanced front-end frameworks like React.</p>
+    </section>
+    <section class="slide-in-right">
+      <h2>Education</h2>
+      <p>Bachelor of Science in Computer Science, Your University, Graduation Year</p>
+    </section>
+    <section class="slide-in-left">
+      <h2>Experience</h2>
+      <p>Front-End Developer Intern, Company Name, Summer 2023 - Developed responsive web interfaces using HTML, CSS, and JavaScript.</p>
+    </section>
+    <footer class="slide-in-right">
+      <p>Contact me: abdirizack@gmail.com</p>
+    </footer>
+  </div>
+
+  <script>
+    // JavaScript for additional animations if needed
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+      fadeElements.forEach((element, index) => {
+        setTimeout(() => {
+          element.style.opacity = 1;
+        }, index * 300); // Adjust the delay as needed
+      });
+    });
+  </script>
+</body>
+</html>
